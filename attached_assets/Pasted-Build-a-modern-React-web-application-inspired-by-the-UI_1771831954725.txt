@@ -1,0 +1,163 @@
+Build a modern React web application inspired by the UI structure of Unstop (clean cards, bottom navigation tabs, structured sections).
+
+This app is called AI-Sahayak – a Government Scheme Eligibility Platform (Phase 1: No AI integration yet).
+
+Tech Stack:
+
+React (Vite or Create React App)
+
+React Router DOM
+
+Context API for global state
+
+Tailwind CSS for styling
+
+Axios for API calls
+
+Design Requirements:
+
+Clean, minimal, professional UI
+
+Card-based layout
+
+Soft shadows, rounded corners
+
+Mobile-first design (responsive)
+
+Bottom navigation bar (fixed)
+
+APP STRUCTURE
+
+Bottom Navigation Tabs:
+
+Discover
+
+Eligible
+
+Saved
+
+Profile
+
+1️⃣ DISCOVER PAGE
+
+Display all schemes as cards (grid layout)
+
+Each card must include:
+
+Scheme name
+
+Short description (2 lines)
+
+Occupation tag (Student/Farmer)
+
+Income eligibility badge
+
+Button: "Check Eligibility"
+
+Button: "Save"
+
+Add search bar at top
+
+Add filter dropdown:
+
+Occupation
+
+Income range
+
+Category
+
+2️⃣ ELIGIBLE PAGE
+
+Display only schemes returned from backend POST /match
+
+Highlight each card with:
+
+Green badge: "You Are Eligible"
+
+Show eligibility criteria summary
+
+3️⃣ SAVED PAGE
+
+Display schemes saved by user
+
+Allow remove from saved
+
+Store saved schemes in global context state
+
+4️⃣ PROFILE PAGE
+
+Create user eligibility form:
+
+Name
+
+Age
+
+Occupation (Dropdown)
+
+Income
+
+Category
+
+State (Default: Maharashtra)
+
+On submit:
+
+Call backend POST /match
+
+Store matched schemes in context
+
+Redirect to Eligible page
+
+STATE MANAGEMENT
+
+Use Context API to store:
+
+user profile data
+
+matched schemes
+
+saved schemes
+
+BACKEND INTEGRATION
+
+Connect to backend at http://localhost:5000/match
+
+Use Axios
+
+Handle loading state
+
+Handle no-match scenario
+
+UI STYLE
+
+Use modern typography
+
+Clean card UI similar to Unstop structure
+
+Use subtle animations on hover
+
+Professional color palette (blue/green theme)
+
+Responsive layout (mobile + desktop)
+
+DO NOT:
+
+Do not add AI yet
+
+Do not add authentication
+
+Do not add database
+
+Keep this Phase 1 only
+
+Code must be modular:
+
+components/
+
+pages/
+
+context/
+
+services/api.js
+
+Provide complete working code.

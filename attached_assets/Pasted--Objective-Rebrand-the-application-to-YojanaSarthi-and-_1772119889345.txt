@@ -1,0 +1,120 @@
+🎯 Objective
+
+Rebrand the application to YojanaSarthi and enhance the left sidebar by filling the empty space with an intelligent AI status panel. Do not break existing routing or eligibility logic.
+
+1️⃣ Rebrand Entire Application
+
+Replace all instances of:
+
+“SchemeMatch”
+
+Any old app name in Navbar, Sidebar, Footer, Title
+
+Metadata title
+
+Favicon title (if applicable)
+
+With:
+
+🟢 YojanaSarthi
+
+Update browser tab title to:
+
+YojanaSarthi – AI-Powered Government Scheme Guide
+
+Do NOT change functionality. Only rename UI labels and metadata.
+
+2️⃣ Add Sidebar Intelligence Panel (Fill Left Gap)
+
+Below the navigation menu in the left sidebar, add a new section.
+
+Add a subtle divider above it.
+
+Section Title:
+
+🤖 AI Eligibility Engine
+
+3️⃣ AI Eligibility Engine Logic
+
+Reuse existing eligibility logic (mandatory + preference-based scoring).
+
+CASE A — Profile Incomplete
+
+If any required profile field is missing:
+
+Age
+
+Income
+
+Category
+
+Occupation
+
+Display:
+
+⚠ Profile Incomplete
+Complete your profile to activate intelligent matching.
+
+Do NOT calculate schemes in this case.
+
+CASE B — Profile Complete
+
+If profile is complete:
+
+Dynamically calculate:
+
+Total Schemes = schemes.length
+
+Eligible Schemes = schemes that pass ALL mandatory criteria
+
+Highly Recommended = schemes with match score ≥ 80%
+
+Display:
+
+✔ Profile Verified
+📊 Schemes Analyzed: X
+✅ Eligible Schemes: Y
+⭐ Highly Recommended: Z
+
+These values must update dynamically.
+Do NOT hardcode numbers.
+
+4️⃣ Add Professional Tagline at Bottom of Sidebar
+
+At the very bottom of sidebar, add small muted text:
+
+“Bridging citizens to the right government benefits through intelligent eligibility matching.”
+
+Keep font subtle and minimal.
+
+5️⃣ Design Rules
+
+Do NOT change routing
+
+Do NOT add backend
+
+Do NOT create new APIs
+
+Reuse existing state and eligibility logic
+
+Keep layout clean and professional
+
+Maintain responsive behavior
+
+Ensure sidebar does not look empty anymore
+
+6️⃣ Final UI Structure (Sidebar)
+Navigation
+🤖 AI Eligibility Engine Panel
+
+Muted Tagline
+
+The sidebar must now feel:
+
+Active
+
+Intelligent
+
+Data-driven
+
+Complete

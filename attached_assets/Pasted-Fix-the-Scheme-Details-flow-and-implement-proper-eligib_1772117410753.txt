@@ -1,0 +1,140 @@
+Fix the Scheme Details flow and implement proper eligibility matching and apply behavior without rebuilding the whole project.
+
+1️⃣ Fix Details Button Routing
+
+Update the “Details” button so it navigates to:
+/scheme/:id
+
+Use React Router (useNavigate or <Link>).
+
+Load the correct scheme using the route parameter.
+
+Remove any redirect to profile page.
+
+Do not modify unrelated routes.
+
+2️⃣ Update SchemeDetails Page
+
+On /scheme/:id, display:
+
+Scheme Name
+
+Description
+
+Benefits
+
+Eligibility Criteria
+
+Required Documents (bullet list)
+
+Official Website link
+
+Eligibility Status section
+
+Apply Button
+
+Use existing scheme data (local array).
+
+3️⃣ Implement Eligibility Logic (Mandatory + AI Match)
+
+Use current user profile data.
+
+Step A — Mandatory Check (Hard Filter)
+
+Check these first:
+
+Age must be within scheme.minAge and scheme.maxAge
+
+Income must be ≤ scheme.maxIncome
+
+If scheme.requiredCategory exists → must match user.category
+
+If scheme.requiredOccupation exists → must match user.occupation
+
+If ANY mandatory condition fails:
+
+Show:
+❌ Not Eligible
+
+Display exact reason (e.g., "Income exceeds limit")
+
+Do NOT calculate score
+
+Disable Apply redirect
+
+Stop further scoring.
+
+Step B — AI Match Score (Only If Mandatory Passed)
+
+If mandatory criteria pass:
+
+Start score at 60.
+
+Add:
+
++20 if income is comfortably within limit (e.g. < 70% of maxIncome)
+
++10 if occupation perfectly matches
+
++10 if category matches priority group
+
+Cap score at 100.
+
+Display:
+
+Eligibility Match: XX%
+
+Badge:
+
+≥80 → “Highly Recommended”
+
+60–79 → “Eligible”
+
+4️⃣ Apply Button Behavior
+
+When Apply is clicked:
+
+If Not Eligible:
+
+Show modal:
+❌ You are not eligible for this scheme.
+Reason: (display reason)
+
+Do NOT redirect.
+
+If Eligible:
+
+Open modal showing:
+
+✔ Application Initiated
+Eligibility Match: XX%
+
+Required Documents:
+
+Document 1
+
+Document 2
+
+Document 3
+
+Add button:
+“Go to Official Portal”
+
+On click:
+
+window.open(scheme.officialUrl, "_blank");
+
+Open in new tab.
+Do NOT auto-redirect.
+
+5️⃣ Important
+
+Do NOT rebuild the project.
+
+Only fix routing and SchemeDetails logic.
+
+No backend required.
+
+Keep UI clean and professional.
+
+This is prototype logic only
