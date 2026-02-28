@@ -159,8 +159,6 @@ Annual Maintenance: ₹4–6 Lakhs
 
 Designed for:
 
-Hackathons
-
 GovTech Innovation
 
 Digital Governance Solutions
@@ -174,18 +172,5 @@ Bridging citizens to the right government benefits through intelligent eligibili
 👨‍💻 Author
 
 Swaraj Dalvi
-GovTech Enthusiast | MERN Developer | Public Policy Aspirant
+GovTech Enthusiast | MERN Developer
 
-🔥 OPTIONAL (Want It More Professional?)
-
-If you want, I can:
-
-Add tech stack badges
-
-Add GitHub shields
-
-Create a better visual section
-
-Add architecture diagram section
-
-Make it look startup-level
